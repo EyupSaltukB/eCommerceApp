@@ -12,8 +12,7 @@ import {appColors} from '../themes/AppColors';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {CartContext} from '../context/CartContext';
 
-const imageUrl =
-  'https://res.cloudinary.com/dlc5c1ycl/image/upload/v1710567613/cwlk21f74nd9iamrlzkh.png';
+
 const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const ProductDetailScreen = () => {
   const route = useRoute();
@@ -49,7 +48,7 @@ const ProductDetailScreen = () => {
         <Image style={styles.coverImage} source={{uri: item.image}} />
         <View style={styles.contentContainer}>
           <Text style={styles.title}>{item.title}</Text>
-          <Text style={[styles.title, styles.price]}>{item.price}</Text>
+          <Text style={[styles.title, styles.price]}>$ {item.price}</Text>
         </View>
         {/* size cont. */}
         <Text style={[styles.title, styles.sizeText]}>Size</Text>

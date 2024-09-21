@@ -117,8 +117,41 @@
         {
             "id": 20,
             "image": "https://shop.mango.com/assets/rcs/pics/static/T7/fotos/S/77083268_95.jpg?ts=1718278455970&im=SmartCrop,width=721,height=1009.4&imdensity=1",
-            "title": "Cashmere Cardigan",
+            "title": "Cardigan",
             "price": 69.99
         }
-    ]
+    ],
+
+    "accountSections": [
+        {
+          "id": 1,
+          "icon": "ShoppingCartIcon",
+          "title": "Orders"
+        },
+        {
+          "id": 2,
+          "icon": "ChatBubbleLeftIcon",
+          "title": "Comments"
+        },
+        {
+          "id": 3,
+          "icon": "TagIcon",
+          "title": "Coupons"
+        },
+        {
+          "id": 4,
+          "icon": "StarIcon",
+          "title": "Reviews"
+        },
+        {
+          "id": 5,
+          "icon": "UserIcon",
+          "title": "Following"
+        },
+        {
+          "id": 6,
+          "icon": "HomeIcon",
+          "title": "Stores"
+        }
+      ]
 }

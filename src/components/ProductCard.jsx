@@ -2,31 +2,29 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useState} from 'react';
 import {appColors} from '../themes/AppColors';
 import {HeartIcon} from 'react-native-heroicons/solid'; // Solid versiyon
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const ProductCard = ({item, handleLiked}) => {
-
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("ProductDetails", {item})} style={styles.container}>
-      <Image
-        source={{uri : item.image}}
-        style={styles.coverImage}
-      />
+    <TouchableOpacity
+      onPress={() => navigation.navigate('ProductDetails', {item})}
+      style={styles.container}>
+      <Image source={{uri: item.image}} style={styles.coverImage} />
       <View style={styles.content}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>$ {item.price}</Text>
       </View>
       <TouchableOpacity
-      onPress={() => {
-        handleLiked(item);
-      }}
-      style={styles.likeContainer}>
+        onPress={() => {
+          handleLiked(item);
+        }}
+        style={styles.likeContainer}>
         {item?.isLiked ? (
-            <HeartIcon color={appColors.like} />
-            ) : (
-                <HeartIcon color={appColors.cardBorder} />
+          <HeartIcon color={appColors.like} />
+        ) : (
+          <HeartIcon color={appColors.cardBorder} />
         )}
       </TouchableOpacity>
     </TouchableOpacity>
@@ -46,6 +44,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: appColors.cardBorder,
     position: 'relative',
+    margin : 3
   },
   coverImage: {
     height: 255,
@@ -65,6 +64,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: 10,
+    alignItems: 'center',
   },
   likeContainer: {
     height: 34,
