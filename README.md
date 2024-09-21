@@ -1,3 +1,12 @@
+# E-Commerce
+Hi everyone! This is an e-commerce project created with React Native.
+
+# Used Library
+- async-storage
+- react-navigation
+- heroicons
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
