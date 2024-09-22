@@ -28,8 +28,8 @@ const CartScreen = () => {
                 <Text style={styles.priceText}>$ {totalPrice}</Text>
               </View>
               <View style={styles.flexRowContainer}>
-                <Text style={styles.titleText}>Shpping:</Text>
-                <Text style={styles.priceText}>$0.0</Text>
+                <Text style={styles.titleText}>Shpping: (free)</Text>
+                <Text style={styles.priceText}>$ 0.00</Text>
               </View>
               <View style={styles.divider} />
               <View style={styles.flexRowContainer}>

@@ -31,7 +31,7 @@ const Header = ({isCart}) => {
           )}
         </TouchableOpacity>
         {isCart && <Text style={styles.myCart}>My Cart</Text>}
-        <Image source={require('../assets/user.png')} style={styles.user} />
+        <Image source={require('../assets/userpp.png')} style={styles.user} />
       </View>
     </SafeAreaView>
   );
