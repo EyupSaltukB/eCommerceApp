@@ -11,7 +11,7 @@ import {appColors} from '../themes/AppColors';
 import {ArrowLeftIcon} from 'react-native-heroicons/outline';
 import {useNavigation} from '@react-navigation/native';
 
-const Header = ({isCart}) => {
+const Header = ({isCart, title}) => {
   const navigation = useNavigation();
   return (
     <SafeAreaView>
@@ -22,7 +22,7 @@ const Header = ({isCart}) => {
           {isCart ? (
             <ArrowLeftIcon color={appColors.primary} size={30} />
           ) : (
-            <TouchableOpacity onPress={() => navigation.goBack("Home")}>
+            <TouchableOpacity onPress={() => navigation.goBack('Home')}>
               <Image
                 style={styles.appIcon}
                 source={require('../assets/marketplace.png')}
@@ -31,7 +31,10 @@ const Header = ({isCart}) => {
           )}
         </TouchableOpacity>
         {isCart && <Text style={styles.myCart}>My Cart</Text>}
-        <Image source={require('../assets/userpp.png')} style={styles.user} />
+        {title && <Text style={styles.myCart}>Categories</Text>}
+        <TouchableOpacity onPress={() => navigation.navigate("Account")}>
+          <Image source={require('../assets/userpp.png')} style={styles.user} />
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

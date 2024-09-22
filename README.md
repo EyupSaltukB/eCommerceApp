@@ -7,8 +7,10 @@ Hi everyone! This is an e-commerce project created with React Native.
 - heroicons
 
 # ScreenShots
-![](./src/assets/screenshots/i15pm-main.png)
-![](./src/assets/screenshots/i15pm-cart.png)
+![](./src/assets/screenshots/homescreen.png)
+![](./src/assets/screenshots/reorderscreen.png)
+![](./src/assets/screenshots/cartscreen.png)
+![](./src/assets/screenshots/accountscreen.png)
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 

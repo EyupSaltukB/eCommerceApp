@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 15,
   },
-  header: {},
   flexRowContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',

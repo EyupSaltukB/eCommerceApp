@@ -2,12 +2,13 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {appColors} from '../themes/AppColors';
 
-const Category = ({item, selectedCategory, setSelectedCategory}) => {
+const Category = ({item, selectedCategory, setSelectedCategory, style}) => {
   return (
     <TouchableOpacity onPress={() => setSelectedCategory(item)}>
       <View
         style={[
           styles.textFrame,
+          style,
           selectedCategory === item && {
             backgroundColor: appColors.primary,
           },
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 16,
     fontWeight: '600',
-    color: appColors.unSelected,
+    color: appColors.white,
     textAlign: 'center',
     paddingHorizontal: 20,
     paddingVertical: 10,

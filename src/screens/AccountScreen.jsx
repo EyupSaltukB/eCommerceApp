@@ -21,7 +21,8 @@ import {
   TagIcon,
   StarIcon,
   UserIcon,
-  HomeIcon
+  HomeIcon,
+  CogIcon
 } from 'react-native-heroicons/solid';
 
 
@@ -32,6 +33,7 @@ const iconMap = {
   StarIcon: StarIcon,
   UserIcon: UserIcon,
   HomeIcon: HomeIcon,
+  CogIcon : CogIcon
 };
 
 const AccountScreen = () => {
@@ -52,29 +54,32 @@ const AccountScreen = () => {
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <ArrowLeftIcon color={appColors.primary} size={30} />
           </TouchableOpacity>
-          <Image source={require('../assets/user.png')} style={styles.user} />
+          <Image source={require('../assets/userpp.png')} style={styles.user} />
           <Text
             style={{fontSize: 20, color: appColors.title, fontWeight: '500'}}>
             Elon Musk
           </Text>
         </View>
         <View style={styles.rightHeadContainer}>
-          <BellSolidIcon color={appColors.primary} size={30} />
-          <ChatBubbleSolidIcon color={appColors.primary} size={30} />
+          <BellSolidIcon color={appColors.unSelected} size={30} />
+          <ChatBubbleSolidIcon color={appColors.unSelected} size={30} />
+          <UserIcon color={appColors.unSelected} size={30}/>
         </View>
       </View>
-      <FlatList
+      <FlatList 
       contentContainerStyle={{
-        paddingBottom : "100%"
+        paddingBottom : 100
       }}
         data={accountSections}
         renderItem={({item}) => {
           const IconComponent = iconMap[item.icon]
           return (
-            <View style={styles.container}>
-              <IconComponent color={appColors.primary} />
+            <TouchableOpacity>
+              <View style={styles.container}>
+              <IconComponent size={30} color={appColors.primary} />
               <Text style={styles.textArea}>{item.title}</Text>
             </View>
+            </TouchableOpacity>
           );
         }}
         keyExtractor={item => item.id}
@@ -108,15 +113,17 @@ const styles = StyleSheet.create({
   textArea: {
     fontSize: 25,
     color: appColors.title,
-    textAlign: 'center',
   },
   container: {
     margin : 10,
     alignItems : "center",
-    flexDirection : "row",
     gap : 10,
-    borderBottomWidth : 1,
-    borderColor : appColors.primary,
-    paddingBottom : 11
+    paddingBottom : 5,
+    borderWidth :2,
+    borderColor : appColors.title,
+    padding : 10,
+    borderRadius : 20,
+    width : "auto",
+    backgroundColor : appColors.accountBg
   },
 });

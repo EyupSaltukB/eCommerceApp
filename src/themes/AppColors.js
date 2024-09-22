@@ -8,4 +8,6 @@ export const appColors = {
     price : "#399918",
     cardBorder: "#B5C0D0",
     like : "#C7253E",
+    bright  : "#E90064",
+    accountBg : "#DFDFDE"
 }

@@ -1,5 +1,5 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {appColors} from '../themes/AppColors';
 import {HeartIcon} from 'react-native-heroicons/solid'; // Solid versiyon
 import {useNavigation} from '@react-navigation/native';
@@ -23,7 +23,7 @@ const ProductCard = ({item, handleLiked}) => {
         style={styles.likeContainer}>
         {item?.isLiked ? (
           <HeartIcon color={appColors.like} />
-        ) : (
+        )  : (
           <HeartIcon color={appColors.cardBorder} />
         )}
       </TouchableOpacity>
