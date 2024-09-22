@@ -25,6 +25,7 @@ const ReorderScreen = ({}) => {
         <FlatList
           contentContainerStyle={{
             marginTop: 10,
+            paddingBottom : 150
           }}
           showsVerticalScrollIndicator={false}
           data={categories}
